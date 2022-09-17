@@ -44,5 +44,4 @@ export const {
   useAddTodoMutation,
   useUpdateTodoMutation,
   useDeleteTodoMutation,
-  useUpdateTodoTextMutation,
 } = apiSlice;
