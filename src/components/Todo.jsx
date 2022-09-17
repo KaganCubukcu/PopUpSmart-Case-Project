@@ -47,10 +47,10 @@ const Todo = () => {
       setNewTodo("");
     }
   };
-  const editTodoHendler = async (e, id) => {
+  const editTodoHandler = async (e) => {
     e.target.contentEditable = true;
   };
-  const saveEditedTodoHendler = async (e, todo) => {
+  const saveEditedTodoHandler = async (e, todo) => {
     editTodo({ ...todo, todo: e.target.textContent });
   };
   let content;
@@ -87,9 +87,9 @@ const Todo = () => {
               style={{
                 textDecoration: todo.isCompleted ? "line-through" : "none",
               }}
-              onClick={editTodoHendler}
+              onClick={editTodoHandler}
               onBlur={(e) => {
-                saveEditedTodoHendler(e, todo);
+                saveEditedTodoHandler(e, todo);
               }}
             >
               {todo.todo}
